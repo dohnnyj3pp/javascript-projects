@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown and Slideshow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .slideshow-container {
+            max-width: 600px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .slides {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Simple Slideshow with Countdown</h1>
+
+    <div class="slideshow-container">
+        <div class="slides active">
+            <img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1">
+        </div>
+        <div class="slides">
+            <img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2">
+        </div>
+        <div class="slides">
+            <img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3">
+        </div>
+    </div>
+
+    <div class="countdown" id="countdown">5</div>
+
+    <script>
+        let currentSlide = 0; // Initialize current slide index
+        const slides = document.querySelectorAll('.slides'); // Get all slides
+        const countdownElement = document.getElementById('countdown'); // Get countdown element
+
+        // Function to show the next slide
+        function showSlide() {
+            // Hide the current slide
+            slides[currentSlide].classList.remove('active');
+            // Move to the next slide
+            currentSlide = (currentSlide + 1) % slides.length; // Loop back to the first slide if at the end
+            // Show the next slide
+            slides[currentSlide].classList.add('active');
+
+            // Reset the countdown for the next slide
+            startCountdown(5); // Start countdown from 5 seconds
+        }
+
+        // Countdown function
+        function startCountdown(seconds) {
+            let timeLeft = seconds; // Set time left to the initial seconds
+            countdownElement.textContent = timeLeft; // Display the initial time
+
+            // Update countdown every second
+            const countdownInterval = setInterval(() => {
+                timeLeft--; // Decrease time left by 1
+                countdownElement.textContent = timeLeft; // Update countdown display
+
+                // When countdown reaches zero
+                if (timeLeft <= 0) {
+                    clearInterval(countdownInterval); // Stop the countdown
+                    showSlide(); // Show the next slide
+                }
+            }, 1000); // Execute every 1000 milliseconds (1 second)
+        }
+
+        // Start the slideshow by showing the first slide and starting the countdown
+        showSlide();
+        startCountdown(5); // Start countdown for the first slide
+    </script>
+
+</body>
+</html>
