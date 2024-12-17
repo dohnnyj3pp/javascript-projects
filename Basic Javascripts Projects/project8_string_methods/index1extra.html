@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods Example</title>
+</head>
+<body>
+
+    <h1>String Methods: toUpperCase() and search()</h1>
+
+    <p id="upperCaseResult"></p>
+    <p id="searchResult"></p>
+
+    <script>
+        // Example of toUpperCase()
+        var originalString = "Hello, world!";
+        var upperCaseString = originalString.toUpperCase(); // Convert to uppercase
+        document.getElementById("upperCaseResult").innerText = "Uppercase String: " + upperCaseString;
+
+        // Example of search()
+        var text = "Hello, world! Welcome to JavaScript.";
+        var index = text.search("world"); // Search for the substring "world"
+        document.getElementById("searchResult").innerText = "Index of 'world': " + index;
+    </script>
+
+</body>
+</html>

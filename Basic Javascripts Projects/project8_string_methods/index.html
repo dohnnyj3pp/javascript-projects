@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String and Number Methods Example</title>
+</head>
+<body>
+
+    <h1>Using String and Number Methods</h1>
+
+    <!-- Buttons to trigger each function -->
+    <button onclick="useConcat()">Use concat()</button>
+    <p id="concatResult"></p> <!-- Element to display concat result -->
+
+    <button onclick="useSlice()">Use slice()</button>
+    <p id="sliceResult"></p> <!-- Element to display slice result -->
+
+    <button onclick="useToString()">Use toString()</button>
+    <p id="toStringResult"></p> <!-- Element to display toString result -->
+
+    <button onclick="useToPrecision()">Use toPrecision()</button>
+    <p id="toPrecisionResult"></p> <!-- Element to display toPrecision result -->
+
+    <script>
+        // Function to demonstrate the concat() method
+        function useConcat() {
+            var str1 = "Hello, ";
+            var str2 = "world!";
+            // Concatenate two strings using concat()
+            var result = str1.concat(str2);
+            // Display the result in the HTML element
+            document.getElementById("concatResult").innerText = "Concat Result: " + result;
+        }
+
+        // Function to demonstrate the slice() method
+        function useSlice() {
+            var originalString = "Hello, world!";
+            // Use slice() to extract a portion of the string
+            var result = originalString.slice(7, 12); // Extracts "world"
+            // Display the result in the HTML element
+            document.getElementById("sliceResult").innerText = "Slice Result: " + result;
+        }
+
+        // Function to demonstrate the toString() method
+        function useToString() {
+            var num = 123.456; // A number
+            // Convert the number to a string using toString()
+            var result = num.toString();
+            // Display the result in the HTML element
+            document.getElementById("toStringResult").innerText = "toString Result: " + result;
+        }
+
+        // Function to demonstrate the toPrecision() method
+        function useToPrecision() {
+            var num = 5.6789; // A number
+            // Use toPrecision() to format the number to 3 significant digits
+            var result = num.toPrecision(3);
+            // Display the result in the HTML element
+            document.getElementById("toPrecisionResult").innerText = "toPrecision Result: " + result;
+        }
+    </script>
+
+</body>
+</html>

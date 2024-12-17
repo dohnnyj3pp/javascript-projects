@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toPrecision() Example</title>
+</head>
+<body>
+
+    <h1>Using the toPrecision() Method</h1>
+
+    <p id="precisionResult"></p> <!-- Element to display the result -->
+
+    <script>
+        // Example number
+        var number = 123.456789;
+
+        // Use toPrecision() to format the number to a specified length
+        var precisionLength = 5; // Specify the total number of significant digits
+        var formattedNumber = number.toPrecision(precisionLength); // Format the number
+
+        // Display the formatted number in the paragraph element
+        document.getElementById("precisionResult").innerText = "Formatted Number: " + formattedNumber;
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods Example</title>
+</head>
+<body>
+
+    <h1>Using toFixed() and valueOf() Methods</h1>
+
+    <p id="fixedResult"></p> <!-- Element to display the result of toFixed -->
+    <p id="valueOfResult"></p> <!-- Element to display the result of valueOf -->
+
+    <script>
+        // Example of toFixed()
+        var number = 5.56789;
+        var fixedNumber = number.toFixed(2); // Format to 2 decimal places
+        document.getElementById("fixedResult").innerText = "Formatted Number (toFixed): " + fixedNumber;
+
+        // Example of valueOf()
+        var numObj = new Number(42); // Create a number object
+        var primitiveValue = numObj.valueOf(); // Get the primitive value
+        document.getElementById("valueOfResult").innerText = "Primitive Value (valueOf): " + primitiveValue;
+    </script>
+
+</body>
+</html>
