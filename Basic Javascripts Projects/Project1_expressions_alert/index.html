@@ -1,1 +1,27 @@
-<script src="JS/main.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display String Example</title>
+</head>
+<body>
+
+    <div id="output"></div> <!-- Element to display the result -->
+    <button onclick="displayConcatenatedString()">Show Result</button> <!-- Button to trigger the function -->
+
+    <script>
+        function displayConcatenatedString() {
+            var Sent1 = "This is the beginning of the string"; // First variable
+            var Sent2 = " and this is the end of the string";  // Second variable
+
+            // Concatenate the two strings
+            var result = Sent1 + Sent2;
+
+            // Use document.getElementById to display the result in an element with the ID "output"
+            document.getElementById("output").innerText = result;
+        }
+    </script>
+
+</body>
+</html>
