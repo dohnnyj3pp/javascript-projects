@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Tic Tac Toe!</title>
+    <link rel="stylesheet" href="./css/tictactoe_style.css">
+</head>
+<body>
+    <h1>Play Tic Tac Toe!</h1>
+    <div class="game-board">
+        <div class="square" id="0" onclick="playXOrO(0)"></div>
+        <div class="square" id="1" onclick="playXOrO(1)"></div>
+        <div class="square" id="2" onclick="playXOrO(2)"></div>
+        <div class="square" id="3" onclick="playXOrO(3)"></div>
+        <div class="square" id="4" onclick="playXOrO(4)"></div>
+        <div class="square" id="5" onclick="playXOrO(5)"></div>
+        <div class="square" id="6" onclick="playXOrO(6)"></div>
+        <div class="square" id="7" onclick="playXOrO(7)"></div>
+        <div class="square" id="8" onclick="playXOrO(8)"></div>
+    </div>
+    <audio id="audioPlace" src="./media/place.mp3"></audio>
+    <audio id="audioWin" src="./media/winGame.mp3"></audio>
+    <audio id="audioTie" src="./media/tie.mp3"></audio>
+    <script src="./js/tictactoe.js"></script>
+</body>
+</html>
